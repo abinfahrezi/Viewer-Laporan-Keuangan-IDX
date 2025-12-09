@@ -5,180 +5,163 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Viewer Laporan Keuangan IDX</title>
   <style>
-:root {
-  --bg: #0f172a;
-  --card: #111827;
-  --accent: #06b6d4;
-  --accent-hover: #0ea5e9;
-  --muted: #94a3b8;
-  --text: #e2e8f0;
-  --glass: rgba(255, 255, 255, 0.05);
-  --radius: 14px;
-  --shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
-}
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #06b6d4;
+      --accent-hover: #0ea5e9;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --glass: rgba(255, 255, 255, 0.05);
+      --radius: 14px;
+      --shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+    }
 
-body {
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background: linear-gradient(180deg, #0a0f1c 0%, #0f172a 100%);
-  color: var(--text);
-  margin: 0;
-  padding: 32px;
-  line-height: 1.6;
-}
+    body {
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: linear-gradient(180deg, #0a0f1c 0%, #0f172a 100%);
+      color: var(--text);
+      margin: 0;
+      padding: 32px;
+      line-height: 1.6;
+    }
 
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-}
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
 
-.card {
-  background: var(--card);
-  padding: 24px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-h1 {
-  margin: 0 0 10px;
-  font-size: 22px;
-  font-weight: 700;
-}
+    h1 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 700;
+    }
 
-p.lead {
-  color: var(--muted);
-  margin: 0 0 18px;
-  font-size: 14px;
-}
+    p.lead {
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 14px;
+    }
 
-label {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: var(--glass);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--text);
-  font-size: 14px;
-  transition: border 0.2s, background 0.2s;
-}
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      font-size: 14px;
+      transition: border 0.2s, background 0.2s;
+    }
 
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.08);
-}
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: rgba(255, 255, 255, 0.08);
+    }
 
-.row {
-  display: flex;
-  gap: 16px;
-}
+    .row {
+      display: flex;
+      gap: 16px;
+    }
 
-.col {
-  flex: 1;
-}
+    .col {
+      flex: 1;
+    }
 
-.actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-  flex-wrap: wrap;
-}
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
 
-button {
-  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
-  border: none;
-  padding: 10px 14px;
-  border-radius: 10px;
-  color: #041a24;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 14px;
-  transition: transform 0.15s ease, opacity 0.2s ease;
-}
+    button {
+      background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+      border: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #041a24;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: transform 0.15s ease, opacity 0.2s ease;
+    }
 
-button:hover {
-  transform: translateY(-2px);
-  opacity: 0.95;
-}
+    button:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
 
-button.ghost {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--muted);
-}
+    button.ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--muted);
+    }
 
-button.ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
+    button.ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
-pre {
-  white-space: pre-wrap;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 14px;
-  border-radius: 10px;
-  color: #dff3fb;
-  font-size: 13px;
-  overflow-x: auto;
-}
+    .result-item {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.2s;
+    }
 
-.result-item {
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-  transition: background 0.2s;
-}
+    .result-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
 
-.result-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
+    .links {
+      flex: 1;
+      overflow-wrap: anywhere;
+      margin-right: 8px;
+      font-size: 13px;
+    }
 
-.links {
-  flex: 1;
-  overflow-wrap: anywhere;
-  margin-right: 8px;
-  font-size: 13px;
-}
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-.links a {
-  color: var(--accent);
-  text-decoration: none;
-}
+    .links a:hover {
+      text-decoration: underline;
+    }
 
-.links a:hover {
-  text-decoration: underline;
-}
+    small {
+      color: var(--muted);
+      font-size: 12px;
+    }
 
-small {
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.controls {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.note {
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 8px;
-  font-style: italic;
-}
-
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -239,80 +222,99 @@ small {
 
   <script>
     const templates = {
-      "Laporan Keuangan": function(kode, tahun, ext) {
-        return `https://www.idx.co.id/Portals/0/StaticData/ListedCompanies/Corporate_Actions/New_Info_JSX/Jenis_Informasi/01_Laporan_Keuangan/02_Soft_Copy_Laporan_Keuangan/Laporan%20Keuangan%20Tahun%20${tahun}/Audit/${kode}/FinancialStatement-${tahun}-Tahunan-${kode}.${ext}`;
-      },
-      "Performance Summary": function(kode) {
-        return `https://www.idx.co.id/Portals/0/StaticData/ListedCompanies/PerformanceSummary/${kode}.pdf`;
-      }
+      "Laporan Keuangan": (kode, tahun, ext) =>
+        `https://www.idx.co.id/Portals/0/StaticData/ListedCompanies/Corporate_Actions/New_Info_JSX/Jenis_Informasi/01_Laporan_Keuangan/02_Soft_Copy_Laporan_Keuangan/Laporan%20Keuangan%20Tahun%20${tahun}/Audit/${kode}/FinancialStatement-${tahun}-Tahunan-${kode}.${ext}`,
+
+      "Performance Summary": (kode) =>
+        `https://www.idx.co.id/Portals/0/StaticData/ListedCompanies/PerformanceSummary/${kode}.pdf`
     };
 
-    function normalizeList(text, uppercase=false) {
-      if(!text) return [];
-      return text.split(',').map(s=>s.trim()).filter(Boolean).map(s=> uppercase ? s.toUpperCase() : s);
-    }
+    const normalizeList = (text, uppercase = false) =>
+      text ? text.split(',').map(s => uppercase ? s.trim().toUpperCase() : s.trim()).filter(Boolean) : [];
 
     function generate() {
       const laporan = document.getElementById('laporan').value;
       const kodeList = normalizeList(document.getElementById('kode').value, true);
-      const tahunList = normalizeList(document.getElementById('tahun').value, false);
+      const tahunList = normalizeList(document.getElementById('tahun').value);
       const ext = document.getElementById('format').value;
       const linkType = document.getElementById('linkType').value;
 
       const results = [];
 
-      if(laporan === 'Laporan Keuangan'){
-        if(kodeList.length === 0 || tahunList.length === 0){
+      if (laporan === 'Laporan Keuangan') {
+        if (!kodeList.length || !tahunList.length) {
           alert('Masukkan setidaknya 1 kode dan 1 tahun untuk Laporan Keuangan.');
           return;
         }
-        for(const kode of kodeList){
-          for(const tahun of tahunList){
+
+        for (const kode of kodeList) {
+          for (const tahun of tahunList) {
             const url = templates['Laporan Keuangan'](kode, tahun, ext);
-            if(linkType === 'Clean Link') results.push(url);
-            else results.push(`${kode}-${tahun}:${url}`);
+            results.push(linkType === 'Clean Link' ? url : `${kode}-${tahun}:${url}`);
           }
         }
-      } else if(laporan === 'Performance Summary'){
-        if(kodeList.length === 0){ alert('Masukkan setidaknya 1 kode.'); return; }
-        for(const kode of kodeList){
+      }
+
+      if (laporan === 'Performance Summary') {
+        if (!kodeList.length) {
+          alert('Masukkan setidaknya 1 kode.');
+          return;
+        }
+
+        for (const kode of kodeList) {
           const url = templates['Performance Summary'](kode);
-          if(linkType === 'Clean Link') results.push(url);
-          else results.push(`${kode}:${url}`);
+          results.push(linkType === 'Clean Link' ? url : `${kode}:${url}`);
         }
       }
 
       renderResults(results);
     }
 
-    function renderResults(results){
+    function renderResults(results) {
       const container = document.getElementById('results');
       container.innerHTML = '';
-      if(results.length === 0){ container.innerHTML = '<small class="note">Tidak ada hasil.</small>'; return; }
+
+      if (!results.length) {
+        container.innerHTML = '<small class="note">Tidak ada hasil.</small>';
+        return;
+      }
 
       const frag = document.createDocumentFragment();
-      results.forEach((line, idx)=>{
-        const wrap = document.createElement('div'); wrap.className='result-item';
-        const left = document.createElement('div'); left.className='links';
-        const a = document.createElement('a');
+
+      results.forEach((line) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'result-item';
+
+        const left = document.createElement('div');
+        left.className = 'links';
+
         const parts = line.split(':');
-        let display = line;
-        let url = line;
-        if(parts.length>=2 && parts[0].match(/^[A-Z0-9-]+$/)){
-          url = parts.slice(1).join(':');
-          display = line;
-        }
+        const isLabeled = parts.length >= 2 && /^[A-Z0-9-]+$/.test(parts[0]);
+        const url = isLabeled ? parts.slice(1).join(':') : line;
+
+        const a = document.createElement('a');
         a.href = url;
         a.target = '_blank';
         a.rel = 'noopener noreferrer';
-        a.textContent = display;
+        a.textContent = line;
+
         left.appendChild(a);
 
         const right = document.createElement('div');
-        const copyBtn = document.createElement('button'); copyBtn.textContent='Copy'; copyBtn.className='ghost';
-        copyBtn.onclick = ()=>{ navigator.clipboard.writeText(line).then(()=>{ copyBtn.textContent='Copied'; setTimeout(()=>copyBtn.textContent='Copy',900); }) };
-        const openBtn = document.createElement('button'); openBtn.textContent='Open';
-        openBtn.onclick = ()=> window.open(url,'_blank');
+
+        const copyBtn = document.createElement('button');
+        copyBtn.textContent = 'Copy';
+        copyBtn.className = 'ghost';
+        copyBtn.onclick = () => {
+          navigator.clipboard.writeText(line).then(() => {
+            copyBtn.textContent = 'Copied';
+            setTimeout(() => (copyBtn.textContent = 'Copy'), 900);
+          });
+        };
+
+        const openBtn = document.createElement('button');
+        openBtn.textContent = 'Open';
+        openBtn.onclick = () => window.open(url, '_blank');
 
         right.appendChild(copyBtn);
         right.appendChild(openBtn);
@@ -327,22 +329,31 @@ small {
     }
 
     document.getElementById('generate').addEventListener('click', generate);
-    document.getElementById('copyAll').addEventListener('click', ()=>{
-      const container = document.getElementById('results');
-      const data = container.dataset.last ? JSON.parse(container.dataset.last) : [];
-      if(data.length===0){ alert('Belum ada hasil untuk disalin.'); return; }
-      const txt = data.join('\n');
-      navigator.clipboard.writeText(txt).then(()=> alert('Semua link disalin ke clipboard'));
+
+    document.getElementById('copyAll').addEventListener('click', () => {
+      const data = JSON.parse(document.getElementById('results').dataset.last || '[]');
+      if (!data.length) return alert('Belum ada hasil untuk disalin.');
+
+      navigator.clipboard.writeText(data.join('\n')).then(() =>
+        alert('Semua link disalin ke clipboard')
+      );
     });
 
-    document.getElementById('downloadAll').addEventListener('click', ()=>{
-      const container = document.getElementById('results');
-      const data = container.dataset.last ? JSON.parse(container.dataset.last) : [];
-      if(data.length===0){ alert('Belum ada hasil untuk diunduh.'); return; }
-      const blob = new Blob([data.join('\n')], {type:'text/plain'});
+    document.getElementById('downloadAll').addEventListener('click', () => {
+      const data = JSON.parse(document.getElementById('results').dataset.last || '[]');
+      if (!data.length) return alert('Belum ada hasil untuk diunduh.');
+
+      const blob = new Blob([data.join('\n')], { type: 'text/plain' });
       const url = URL.createObjectURL(blob);
+
       const a = document.createElement('a');
-      a.href = url; a.download = 'idx_links.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+      a.href = url;
+      a.download = 'idx_links.txt';
+      document.body.appendChild(a);
+      a.click();
+
+      a.remove();
+      URL.revokeObjectURL(url);
     });
 
     generate();
